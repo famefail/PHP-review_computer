@@ -1,0 +1,29 @@
+
+.container{
+    border: 1px solid black;
+    width: 40%;
+    height: 40%;
+    margin: 10% auto;
+    height: auto;
+}
+.form{
+    margin: 50px;
+}
+input{
+    padding: 2px;
+    position: absolute;
+    right: 45%;
+}
+a{
+    display: inline-block;
+}
+button{
+    margin: 0 auto;
+    display: inline-block;
+}
+.submit{
+    text-align: center;
+}
+.detail{
+    display: inline;
+}
