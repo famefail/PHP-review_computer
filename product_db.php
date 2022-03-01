@@ -18,12 +18,6 @@ $id = array();
 $notebook_name = array();
 $price = array();
 $img = array();
-$category;
-$_SESSION['id'] = array();
-$_SESSION['notebook_name'] = array();
-$_SESSION['price'] = array();
-$_SESSION['img'] = array();
-// $category;
 
 //click category
 if(isset($_GET['subCategory'])){
@@ -36,7 +30,14 @@ if(isset($_GET['subCategory'])){
     $result  = $conn->query($sql);
 
     // array_splice($notebook_name,0, count($notebook_name));
-    
+    unset($_SESSION['id']);
+    unset($_SESSION['notebook_name']);
+    unset($_SESSION['price']);
+    unset($_SESSION['img']);
+    $_SESSION['id'] = array();
+    $_SESSION['notebook_name'] = array();
+    $_SESSION['price'] = array();
+    $_SESSION['img'] = array();
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
           array_push($_SESSION['id'], $row['notebook_id']);
@@ -51,7 +52,7 @@ if(isset($_GET['subCategory'])){
     }
     header("location: category.php");
    }
-//    unclick category
+//    unclick category then show all product
    else if (!isset($_GET['subCategory'])){
     $sql = "SELECT * FROM notebook";
     $result = $conn->query($sql);

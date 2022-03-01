@@ -1,7 +1,6 @@
 <?php 
 
     include('category_db.php');
-    session_start();
 ?>
 <html lang="en">
 <head>
@@ -27,7 +26,7 @@
     </div>
     
     <div class = "brand">
-    <form action="product_db.php" method="GET">
+    <form action="category_db.php" method="GET">
     <label for="ิcategory">ยี่ห้อ </label>
     <select name="category" >
         <!-- มส่ if else ให้ select -->
@@ -38,7 +37,7 @@
         ?>
             
         <?php for($i = 0 ; $i < count($category_id) ; $i++) {
-            echo '<option value = ' .$category_id[$i].'>'.$category_name[$i].'</option>'
+            echo '<option value = ' .$category_name[$i].'>'.$category_name[$i].'</option>'
         ;}?>
     </select>
     <input type="submit" name = "subCategory">
