@@ -1,0 +1,150 @@
+h3{
+    font-size: 22px;
+    text-indent:300px
+}
+h3d{
+    font-size: 22px;
+    color: wheat;
+}
+body{
+    font-family: sans-serif ;
+    background-color: rgb(249, 255, 255);
+}
+.nav-center{
+    position: relative;
+    left: -10px;
+    top:-10px;
+    width: 101%;
+    display: flex;
+    justify-content: space-between;
+    color:black;
+    border: none;
+    box-shadow: 2px 2px 1px rgb(197, 197, 197);
+}
+.nav-logo{
+    padding: 1px 10px 1px 10px;
+}
+nav{
+    padding: 20px;
+}
+a{
+    text-decoration: none;
+    color:black;
+    padding: 20px;
+}
+a:hover{ 
+    text-decoration: underline;
+}
+.video{
+    text-align: center;
+    border: 1px solid black;
+    height: 90%;
+    background-color: black;
+    margin-bottom: 20px;
+}
+.video-container{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+.video-btn{
+    padding: 10px;
+    border:  double black;
+    z-index: 3;
+    cursor: pointer;
+    transition: 1s;
+}
+.video-btn-hover{
+background-color: black;
+color:white;
+}
+.des-video{
+    color:aliceblue;
+    position: relative;
+    bottom: 60%;
+    margin: auto;
+}
+
+.new-release-container{
+    width: 100%;
+    height: 50%;
+    border: 1px solid black;
+    display: flex;
+    display: space-between;
+}
+.new-release{
+    margin: auto 30px;
+    border: 1px solid black;
+    width: 20%;
+    height: 50%;
+    padding: 20px;
+    text-align: center;
+}
+.new-release-img{
+    border: 1px solid black;
+    width: 90%;
+    height: 70%;
+    margin: auto;
+    margin-bottom:10px;
+}
+
+.brand{
+    border: 1px solid red;
+    padding: 1rem;
+    text-align: right;
+}
+select{
+    width:20%;
+    padding:10px
+}
+.product-container{
+    border:1px solid black;
+    height:70%;
+    padding:10px;
+    margin: 30px;
+}
+img{
+    border:1px solid green;
+    width: 300px;
+    height: 300px;
+    
+}
+
+.detail{
+    border: 1px solid blue;
+    width: 70%;
+    height: 300px;
+    margin: 20px;
+    float:left;
+
+    
+}
+.block-0 {
+	width: 180px;
+	height: 100%;
+	margin: 20px;
+	background-color: rgb(249, 255, 255);
+
+}
+.block{
+	width: 180px;
+	height: 10%;
+	margin: 20px;
+	background-color: rgb(249, 255, 255);
+
+}
+.block-1 {
+	width: 120px;
+	height: 5%;
+	margin: 10px;
+	background: black;
+
+}
+.block-2 {
+	width: 180px;
+	height: 5%;
+	margin: 10px;
+	background: black;
+
+}

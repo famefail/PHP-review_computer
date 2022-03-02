@@ -43,6 +43,17 @@
     <input type="submit" name = "subCategory">
         </form>
         
+        <form action="sort_db.php" method = GET>
+        <label for="birthday">เรียงตาม:</label>
+        <select name = "sort">
+        <option value = ""></option>
+            <option value = "new">สินค้าใหม่-เก่า</option>
+            <option value = "old">สินค้าเก่า-ใหม่</option>
+            <option value = "A">ตัวอักษร A-Z</option>
+            <option value = "Z">ตัวอักษร Z-A</option>
+        </select>
+        <input type="submit" name = "subSort"value = "ค้นหา" >
+      </form>
     <!-- <form action="./action_page.php">
         <label for="birthday">วันที่:</label>
         <input type="date" id="birthday" name="birthday">
@@ -60,7 +71,8 @@
         '.$_SESSION['notebook_name'][$i].'
     </div>
 </div>'
-;}?>
+;}
+?>
 </body>
 </html>
 </body>

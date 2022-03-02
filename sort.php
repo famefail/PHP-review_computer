@@ -1,5 +1,4 @@
-<?php include('product_db.php') ?>
-
+<?php include('sort_db.php')?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -53,14 +52,14 @@
       </form>
     
 </div>
-<?php for($i = 0 ; $i < count($id) ; $i++) {
+<?php for($i = 0 ; $i < count($_SESSION['id']) ; $i++) {
      echo '
 <div class = product-container>
     <div class = product-img> 
-    <img src ='.$img[$i].' style = "width: 150px; height:200px;" alt="">
+    <img src ='.$_SESSION['img'][$i].' style = "width: 150px; height:200px;" alt="">
 </div>
     <div class = detail>
-        '.$notebook_name[$i].'
+        '.$_SESSION['notebook_name'][$i].'
     </div>
 </div>'
 ;}?>

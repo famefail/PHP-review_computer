@@ -1,0 +1,2 @@
+SELECT * FROM notebook ORDER BY date DESC; เรียงตามวันที่ออกบนลงล่าง
+
