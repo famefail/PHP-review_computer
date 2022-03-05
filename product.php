@@ -22,7 +22,12 @@
             <a href = "index.php?logout='1'">Logout</a>
         </nav>
     </div>
-
+         <!-- search -->
+        <form action="search_db.php" method = "get" class = "search">
+                <label for="search">ค้นหาสินค้า</label>
+                <input type = "text" name = "search">
+                <input type = "submit" name =  "subSearch">
+        </form>
     <button class = "dark-btn">
         logo
             </button>

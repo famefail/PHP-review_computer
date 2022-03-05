@@ -64,7 +64,7 @@ select{
     border:1px solid green;
     position:fixed;
     right: 10px;
-    top:70px;
+    top:110px;
 }
 .darkmode-gray{
     background-color: rgb(32, 32, 32);
@@ -73,4 +73,9 @@ select{
 .darkmode-black{
     background-color: rgb(24, 24, 24);
     color:white;
+}
+.search{
+    position: relative;
+    text-align: right;
+    margin: 10px;
 }

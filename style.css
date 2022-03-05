@@ -134,7 +134,7 @@ color:white;
     border:1px solid green;
     position:fixed;
     right: 10px;
-    top:70px;
+    top:110px;
 }
 .darkmode-gray{
     background-color: rgb(32, 32, 32);
@@ -147,4 +147,9 @@ color:white;
 .hide{
     display:none;
     z-index: -3;
+}
+.search{
+    position: relative;
+    text-align: right;
+    margin: 10px;
 }

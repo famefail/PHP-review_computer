@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product</title>
-    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="product.css?v=<?php echo time(); ?>">
 </head>
 <body>
 <button class = "dark-btn">
@@ -24,7 +24,12 @@
             <a href = "index.php?logout='1'">Logout</a>
         </nav>
     </div>
-    
+     <!-- search -->
+     <form action="search_db.php" method = "get" class = "search">
+                <label for="search">ค้นหาสินค้า</label>
+                <input type = "text" name = "search">
+                <input type = "submit" name =  "subSearch">
+        </form>
     <div class = "brand">
     <form action="product_db.php" method="GET">
     <label for="ิcatrgory">ยี่ห้อ </label>

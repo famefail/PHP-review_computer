@@ -12,7 +12,7 @@
 <body>
 
     <!-- popup -->
-    <div class = popup-bg>
+    <!-- <div class = popup-bg>
     <div class = popup-container> 
         <div class = popup>
              popup
@@ -20,7 +20,7 @@
              <button type="button" class = popupbtn>x</button>
          </div>
     </div>
-</div>
+</div> -->
    
     <!-- nav  -->
     <div class = "nav-center"> 
@@ -36,8 +36,14 @@
             <?php endif?>
             <a href = "index.php?logout='1'">Logout</a>
         </nav>
-        
-    </div>
+        </div>
+
+        <!-- search -->
+        <form action="search_db.php" method = "get" class = "search">
+                <label for="search">ค้นหาสินค้า</label>
+                <input type = "text" name = "search">
+                <input type = "submit" name =  "subSearch">
+        </form>
 
     <!-- video -->
     <div class = "video">
