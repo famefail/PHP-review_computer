@@ -54,7 +54,7 @@ if(isset($_GET['subCategory'])){
    }
 //    unclick category then show all product
    else if (!isset($_GET['subCategory'])){
-    $sql = "SELECT * FROM notebook";
+    $sql = "SELECT * FROM notebook ORDER BY date DESC";
     $result = $conn->query($sql);
     
     if ($result->num_rows > 0) {

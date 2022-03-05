@@ -11,6 +11,16 @@
 </head>
 <body>
 
+    <!-- popup -->
+    <div class = popup-bg>
+    <div class = popup-container> 
+        <div class = popup>
+             popup
+             <br>
+             <button type="button" class = popupbtn>x</button>
+         </div>
+    </div>
+</div>
    
     <!-- nav  -->
     <div class = "nav-center"> 
@@ -28,6 +38,8 @@
         </nav>
         
     </div>
+
+    <!-- video -->
     <div class = "video">
         <video autoplay loop muted class = "video-container">
             <source src="video/home.mkv">
@@ -39,7 +51,11 @@
         </button>
     </div>
     </div> 
-    
+    <!-- ปุ่ม darkmode  -->
+    <button class = "dark-btn">
+        logo
+            </button>
+<!-- แสดงข้อมูล 3 อัน -->
      สินค้ามาใหม่ - New Release
     <div class = "new-release-container">
         
@@ -47,7 +63,6 @@
      echo '
         <form action = "index_db.php"method = "post" >
         <div value = $notebook_name[$i]> dwdwd</div>
-        <button type = "submit" name = "clickProduct"></button>
             </form>
 
 
@@ -69,6 +84,28 @@
      
     
     </div>
-    <script src = "index.js"></script>
+    <script type = "text/javascript">
+        const darkbtn =  document.querySelector('.dark-btn');
+        const newre = document.querySelector('.new-release-container');
+        const body = document.querySelector("body")
+        const aa = document.querySelectorAll("a")
+        const nav  = document.querySelector(".nav-center")
+        const popupbtn = document.querySelector('.popupbtn')
+        const popup = document.querySelector('.popup-bg')
+
+        popupbtn.addEventListener('click', function(){
+            popup.classList.add('hide')
+        })
+        darkbtn.addEventListener('click', function(){
+    console.log("click")
+    newre.classList.toggle('darkmode-black');
+    body.classList.toggle('darkmode-black'); 
+    nav.classList.toggle('darkmode-gray');
+    for (let i = 0; i < aa.length; i++) {
+    aa[i].classList.toggle('darkmode-gray');
+  }
+ 
+})
+    </script>
 </body>
 </html>

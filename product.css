@@ -1,3 +1,7 @@
+body{
+    font-family: sans-serif ;
+    transition: 0.5;
+}
 .nav-center{
     position: relative;
     left: -10px;
@@ -52,4 +56,21 @@ select{
     width: 100%;
     height: 30px;
     padding: 30px;
+}
+.dark-btn{
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+    border:1px solid green;
+    position:fixed;
+    right: 10px;
+    top:70px;
+}
+.darkmode-gray{
+    background-color: rgb(32, 32, 32);
+    color:white;
+}
+.darkmode-black{
+    background-color: rgb(24, 24, 24);
+    color:white;
 }

@@ -21,7 +21,6 @@
                   array_push($_SESSION['notebook_name'], $row['notebook_name']);
                   array_push($_SESSION['price'], $row['price']);
                   array_push($_SESSION['img'], $row['img']);
-                  var_dump($_SESSION['notebook_name']);
                 }
                 header('location: sort.php');
             }
@@ -43,7 +42,6 @@
                   array_push($_SESSION['notebook_name'], $row['notebook_name']);
                   array_push($_SESSION['price'], $row['price']);
                   array_push($_SESSION['img'], $row['img']);
-                  var_dump($_SESSION['notebook_name']);
                 }
                 header('location: sort.php');
               }
@@ -65,7 +63,6 @@
                   array_push($_SESSION['notebook_name'], $row['notebook_name']);
                   array_push($_SESSION['price'], $row['price']);
                   array_push($_SESSION['img'], $row['img']);
-                  var_dump($_SESSION['notebook_name']);
                 }
                 header('location: sort.php');
               }
@@ -87,7 +84,6 @@
                     array_push($_SESSION['notebook_name'], $row['notebook_name']);
                     array_push($_SESSION['price'], $row['price']);
                     array_push($_SESSION['img'], $row['img']);
-                    var_dump($_SESSION['notebook_name']);
                   }
                   header('location: sort.php');
                 }
