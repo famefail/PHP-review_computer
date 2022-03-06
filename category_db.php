@@ -26,9 +26,7 @@
               array_push($_SESSION['img'], $row['img']);
 
             }
-            
-            
-        }else{
+         }else{
             echo "error";
         }
         header("location: category.php");

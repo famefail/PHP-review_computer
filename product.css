@@ -43,17 +43,25 @@ select{
     width:20%;
     padding:10px
 }
+.product-bg{
+    display:flex;
+    flex-wrap: wrap;
+}
 .product-container{
     border:1px solid black;
+    width: 26%;
     height: auto;
     padding:10px;
     margin: 30px;
-    display: flex;
+    display:block;
+}
+.product-img{
+    text-align: center;
 }
 
 .detail{
     border: 1px solid green;
-    width: 100%;
+    width: auto;
     height: 30px;
     padding: 30px;
 }

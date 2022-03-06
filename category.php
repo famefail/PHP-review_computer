@@ -33,6 +33,14 @@
                 <input type = "text" name = "search">
                 <input type = "submit" name =  "subSearch">
         </form>
+        <!-- filter price  -->
+        <form action="price_db.php" method = "get" class = "search">
+                <label for="min">ราคาขั้นต่ำ</label>
+                <input type = "text" name = "min">
+                <label for="max">ราคาสูงสุด</label>
+                <input type = "text" name = "max">
+                <input type = "submit" name =  "subPrice">
+        </form>
     <div class = "brand">
     <form action="category_db.php" method="GET">
     <label for="ิcategory">ยี่ห้อ </label>
