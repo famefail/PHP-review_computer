@@ -20,10 +20,8 @@ $id = array();
 $notebook_name = array();
 $price = array();
 $img = array();
-
-$sql = "SELECT * FROM notebook";
+$sql = "SELECT * FROM notebook ";
 $result = $conn->query($sql);
-
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
       array_push($id, $row['notebook_id']);

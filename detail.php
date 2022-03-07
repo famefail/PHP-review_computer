@@ -1,6 +1,15 @@
-<?php include('detaildb.php') ?>
+<?php 
+    
+    include('product_db.php');
+ $id = @$_GET['id'];
+  if(!$id){
+      echo 'no id';
+      exit;
+  }
+$query = mysqli_query($conn, "SELECT * FROM notebook WHERE notebook_id = $id");
+$result = mysqli_fetch_array($query);
 
-
+?>
 
 <html lang="en">
 <head>
@@ -29,43 +38,34 @@
         </nav>
     </div>
     
-    <div class = "brand">
-    <label for="ิbrand">ยี่ห้อ </label>
-    <select name="brand" >
-        <option value=""></option>
-        <?php for($i = 0 ; $i < count($id) ; $i++) {
-            echo '<option value = ' .$category_name[$i].'>'.$category_name[$i].'</option>'
-        ;}?>
-    </select>
-    <form action="./action_page.php">
-        <label for="birthday">วันที่:</label>
-        <input type="date" id="birthday" name="birthday">
-        <input type="submit" value = "ค้นหา" >
-      </form>
     
       
 </div>
     <div class="block-2">   
         <h3d>รายการสินค้าล่าสุด</h3d>
         </div>
-    <?php 
-            echo '
-                <div align="center">
-                <div class = product-img> 
-                <img src ='.$img[0].' style = "width: 200px; height:200px;float:center;" >
-                </div>
-                </div>
-                <br>
-                <h3>ชื่อสินค้า :'.$notebook_name[0].'</h3>
-                <br>
-                <h3><u>รายละเอียดสินค้า</u></h3>
-                <br>
-                <h3>ราคา :'.$price[0].'</h3>
-                
-                <br>
-                <h3>คะแนนรีวิว :</h3>
-               
-               '
+        <?php 
+        
+        echo '
+            
+        <div align="center">
+        <div class = product-img> 
+        <img src ='.$result['img'].' style = "width: 200px; height:200px;float:center;" >
+        </div>
+        </div>
+        <br>
+        <h3 style=text-indent:300px;>ชื่อสินค้า :'.$result['notebook_name'].'</h3>
+        <br>
+        <h3 style=text-indent:300px;><u>รายละเอียดสินค้า</u></h3>
+        <br>
+        <h3 style=text-indent:300px;>ราคา :'.$result['price'].'</h3>
+        
+        <br>
+        <h3 style=text-indent:300px;>คะแนนรีวิว :</h3>
+            </div>
+    '
+         
+            
 
 
 

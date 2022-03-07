@@ -24,4 +24,14 @@
         header('location: price.php');
      }
     }
+    $category_id = array();
+   $category_name = array();
+   $categorySql = "SELECT * FROM category";
+   $resultCategory = $conn->query($categorySql);
+   if ($resultCategory->num_rows > 0) {
+       while($row = $resultCategory->fetch_assoc()) {
+        array_push($category_name, $row['category_name']);
+        array_push($category_id, $row['category_id']);
+       }
+    }
 ?>

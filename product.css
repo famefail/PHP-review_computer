@@ -1,28 +1,49 @@
 body{
     font-family: sans-serif ;
     transition: 0.5;
+    background-color: rgb(244, 249, 255);
 }
 .nav-center{
     position: relative;
     left: -10px;
     top:-10px;
     width: 101%;
+    padding: 10px;
     display: flex;
-    justify-content: space-between;
     color:black;
     border: none;
-    box-shadow: 2px 2px 1px rgb(197, 197, 197);
 }
 .nav-logo{
     padding: 1px 10px 1px 10px;
 }
+.nav-link{
+    position:absolute;
+    right: 0;
+    
+}
 nav{
     padding: 20px;
 }
+.nav-block{
+    display: block;
+    height: 10%;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    
+}
+.nav-btn{
+    position: relative;
+    right:20px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(201, 201, 201);
+}
 a{
+    position: relative;
+    right:30px;
     text-decoration: none;
     color:black;
-    padding: 20px;
+    padding-left: 30px;
 }
 a:hover{ 
     text-decoration: underline;
@@ -35,7 +56,6 @@ a:hover{
     margin-bottom: 20px;
 }
 .brand{
-    border: 1px solid red;
     padding: 1rem;
     text-align: right;
 }
@@ -48,7 +68,8 @@ select{
     flex-wrap: wrap;
 }
 .product-container{
-    border:1px solid rgb(165, 165, 165);
+    border:1px solid rgb(224, 224, 224);
+    background-color: rgb(255, 255, 255);
     width: 26%;
     height: auto;
     padding:10px;
@@ -65,28 +86,32 @@ select{
 }
 
 .detail{
-    border: 1px solid green;
     width: auto;
     height: 30px;
     padding: 30px;
     text-align: center;
+    line-height: 25px;
 }
 .dark-btn{
     width: 40px;
     height:40px;
     border-radius: 50%;
-    border:1px solid green;
+    border:1px solid rgb(206, 80, 168);
     position:fixed;
     right: 10px;
     top:110px;
+    background-color: rgb(19, 19, 19);
+    color: white;
 }
 .darkmode-gray{
     background-color: rgb(32, 32, 32);
     color:white;
+    border: 1px solid rgb(32, 32, 32);
 }
 .darkmode-black{
     background-color: rgb(24, 24, 24);
     color:white;
+    border: rgb(39, 39, 39);
 }
 .search{
     position: relative;
@@ -103,4 +128,23 @@ select{
     border-radius: 5px;
     /* background-color: rgb(233, 232, 232); */
     /* padding:10px; */
+}
+.nav-hover{
+    height:auto;
+}
+.logout{
+    color:red;
+}
+.price{
+    text-align: right;
+    padding:10px;
+}
+.input{
+    border-radius: 5px;
+}
+.submit{
+    border:none;
+    border-radius: 5px;
+    background-color: rgb(240, 240, 240);
+    padding:5px;
 }
