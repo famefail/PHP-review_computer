@@ -34,16 +34,16 @@ if(isset($_GET['subCategory'])){
     unset($_SESSION['notebook_name']);
     unset($_SESSION['price']);
     unset($_SESSION['img']);
-    $_SESSION['id'] = array();
-    $_SESSION['notebook_name'] = array();
-    $_SESSION['price'] = array();
-    $_SESSION['img'] = array();
+    $id = array();
+    $notebook_name = array();
+    $price = array();
+    $img = array();
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-          array_push($_SESSION['id'], $row['notebook_id']);
-          array_push($_SESSION['notebook_name'], $row['notebook_name']);
-          array_push($_SESSION['price'], $row['price']);
-          array_push($_SESSION['img'], $row['img']);
+          array_push($id, $row['notebook_id']);
+          array_push($notebook_name, $row['notebook_name']);
+          array_push( $price, $row['price']);
+          array_push($img, $row['img']);
         }
         
         

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="product.css?v=<?php echo time(); ?>">
 </head>
 <body>
+    <!-- nav -->
 <div class = "nav-block">
     <div class = "nav-center">
         <nav class = "nav-logo">
@@ -29,8 +30,6 @@
             <?php endif?>
            <button class = "nav-btn">=</button> 
         </nav>
-        
- 
         </div>
         <!-- filter price  -->
         <form action="price_db.php" method = "get" class = "price">
@@ -78,16 +77,16 @@
     
 </div>
 <div class = "product-bg">
-<?php for($i = 0 ; $i < count($_SESSION['id']) ; $i++) {
+<?php for($i = 0 ; $i < count($id) ; $i++) {
      echo '
 <div class = product-container>
     <div class = product-img> 
-    <img src ='.$_SESSION['img'][$i].' style = "width: 150px; height:200px;" alt="">
+    <img src ='.$img[$i].' style = "width: 150px; height:200px;" alt="">
 </div>
     <div class = detail>
-        '.$_SESSION['notebook_name'][$i].'
+        '.$notebook_name[$i].'
         <br>
-        ราคา: '.$_SESSION['price'][$i].'
+        ราคา: '.$price[$i].'
     </div>
 </div>'
 ;}?>
