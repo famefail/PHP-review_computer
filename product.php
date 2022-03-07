@@ -109,8 +109,17 @@
   for (let i = 0; i < product.length; i++) {
     product[i].classList.toggle('darkmode-gray');
   }
- 
 })
+    for (let i = 0; i < product.length; i++) {
+    product[i].addEventListener('mouseenter', function(){
+        product[i].classList.add('product-hover');
+        
+    })
+    product[i].addEventListener('mouseleave', function(){
+        product[i].classList.remove('product-hover');
+        
+    })
+    }
     </script>
 </body>
 </html>
