@@ -1,14 +1,29 @@
 <?php 
-    
     include('product_db.php');
- $id = @$_GET['id'];
+    if(isset($_GET['id'])){
+ $_SESSION['select'] = @$_GET['id'];
   if(!$id){
       echo 'no id';
       exit;
   }
-$query = mysqli_query($conn, "SELECT * FROM notebook WHERE notebook_id = $id");
+}
+$query = mysqli_query($conn, "SELECT * FROM notebook WHERE notebook_id = $_SESSION[select]");
 $result = mysqli_fetch_array($query);
 
+$sqlComment = "SELECT * FROM comment WHERE post_id = $_SESSION[select]";
+$queryComment = mysqli_query($conn, $sqlComment);
+$commentID = array();
+$comment = array();
+$user = array();
+$date = array();
+if ($queryComment->num_rows > 0) {
+    while($row = $queryComment->fetch_assoc()) {
+      array_push($commentID, $row['id']);
+      array_push($comment, $row['comment']);
+      array_push($user, $row['user_comment']);
+      array_push($date, $row['data_comment']);
+    }
+}
 ?>
 
 <html lang="en">
@@ -57,7 +72,7 @@ $result = mysqli_fetch_array($query);
         
         echo '
             
-        <div class  = detail-container>
+        <div class  = detail-container '.$result['notebook_id'].'>
         <div class = detail-img> 
         <img src ='.$result['img'].' style = "width: 250px; height:270px;float:center;" >
         </div>
@@ -65,18 +80,19 @@ $result = mysqli_fetch_array($query);
         <div class = detail>
         <h3>ชื่อสินค้า :'.$result['notebook_name'].'</h3>
         <br>
-        
-        <h3 >รายละเอียดสินค้า:
-        <a  href= '.$result['detail'].'>a</a></h3>
-        
-        <br>
         <h3 >ราคา :'.$result['price'].'</h3>
-        
         <br>
-        <h3 >คะแนนรีวิว :
-        <button class="btn">3.5k<i class="bi bi-heart" style =float:right></i><i class="fa-regular fa-alicorn"></i></button></h3>
-        <h3 >คอมเมนต์ : <button class="btn"><i class="far fa-comment"></i></button></h3>
+        <div class = detail-flex>
+        <h3 >คะแนนรีวิว :</h3>
+        <button class="btn" style = display:flex;><h3>3.5k</h3><i class="bi bi-heart" ></i><i class="fa-regular fa-alicorn"></i></button>
         </div>
+        <div class = detail-flex>
+        <h3 >คอมเมนต์ : </h3> <button class="btn"><i class="far fa-comment"></i></button>
+        </div>
+        <br>  
+        <a class = "detail-link" href= '.$result['detail'].'>รายละเอียดสินค้า</a>
+        </div>
+       
         </div>
         
 
@@ -91,6 +107,27 @@ $result = mysqli_fetch_array($query);
                     <input type="submit" name="addcomment" value="comment" class="btn btn-info my-2">
         </form>
         </div>
+
+        <div class = view-count>
+                  Review   <?php echo count($commentID)?>
+            </div>
+            
+        <!-- คน comment -->
+        <?php for($i = 0 ; $i < count($commentID) ; $i++) {
+        echo '<div class = user-container>
+        <div class = user-flex>
+        <div class = user>'.$user[$i].'
+        </div>
+        <div class = "user-date">  
+        '.$date[$i].'
+        </div>
+        </div>
+        <div class = user-comment>
+            '.$comment[$i].'
+        </div>
+     </div>';    
+    }
+ ?>
  <script type="text/javascript">
 
  $(document).on('click',".send",function(event){

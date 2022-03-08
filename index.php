@@ -52,7 +52,7 @@
         <div class = des-video>
             <h1>Good deal, Good price</h1>
          <button class = "video-btn">
-         <a href="product.php">view more</a>
+         <a class = "video-link"href="product.php">view more</a>
         </button>
     </div>
     </div> 
@@ -66,7 +66,7 @@
         
           <?php for($i = 0 ; $i < count($id) ; $i++) {
      echo '<div class = product-container>
-     <a href="detail.php?id='.$id[$i].'">
+     <a  class = product-link href="detail.php?id='.$id[$i].'">
          <div class = product-img>
          
              <img src ='.$img[$i].' style = "width: 180px; height:180px;"></a>
@@ -75,7 +75,7 @@
             ชื่อสินค้า :
              '.$notebook_name[$i].'
              <br>
-             ราคาสินค้า :
+             ราคา :
              '.$price[$i].' บาท
                 </div>
                 </div>'
@@ -95,6 +95,7 @@
         const popupbtn = document.querySelector('.popupbtn')
         const popup = document.querySelector('.popup-bg')
         const product = document.querySelectorAll('.product-container')
+        const videobtn = document.querySelector('.video-btn')
 
         popupbtn.addEventListener('click', function(){
             popup.classList.add('hide')
@@ -110,12 +111,15 @@
     }
 
         darkbtn.addEventListener('click', function(){
-    console.log("click")
     newre.classList.toggle('darkmode-black');
+    videobtn.classList.toggle('darkmode-gray');
     body.classList.toggle('darkmode-black'); 
     nav.classList.toggle('darkmode-gray');
     for (let i = 0; i < aa.length; i++) {
     aa[i].classList.toggle('darkmode-gray');
+  }
+  for (let i = 0; i < product.length; i++) {
+    product[i].classList.toggle('darkmode-gray');
   }
  
 })

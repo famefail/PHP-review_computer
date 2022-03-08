@@ -1,6 +1,4 @@
-h3{
-    font-size: 22px;
-}
+
 h3{
     font-size: 22px;
     color: rgb(68, 68, 68);
@@ -61,4 +59,52 @@ a:hover{
 }
 .search{
     margin-top: 10px;
+}
+.detail-link{
+    border: 1px solid rgb(206, 80, 168);
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.25s;
+    color: rgb(57, 173, 245);
+}
+.detail-link:hover{
+    background-color: rgb(206, 80, 168);
+    color: white;
+    text-decoration: none;
+}
+.detail-flex{
+    display:flex;
+}
+.user-container{
+    display: block;
+    background-color: white;
+    margin-left: 30px;
+    min-width: 30%;
+    border: 1px solid rgb(206, 80, 168);
+    border-radius:10px;
+    margin-bottom: 20px;
+}
+.user-flex{
+    display: flex;
+}
+.user{
+    font-size: 20px;
+    padding:20px 20px 0 20px;
+    color: rgb(57, 173, 245);
+}
+.user-date{
+   position: relative;
+   top:30px;
+    font-size: 12px;
+}
+.user-comment{
+    font-size: 18px;
+    padding:10px  0 20px 20px;
+    color: rgb(61, 61, 61);
+}
+.view-count{
+    text-align: center;
+    font-size: 26px;
+    color:gray;
+    padding:20px;
 }

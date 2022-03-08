@@ -1,18 +1,32 @@
-
+body{
+    background-color: rgb(244, 249, 255);
+}
+h3{
+    padding: 30px;
+    text-align: center;
+    font-size: 24px;
+}
+h4{
+    color:red;
+}
 .container{
-    border: 1px solid black;
-    width: 40%;
-    height: 40%;
-    margin: 10% auto;
+    width: 32%;
+    height: auto;
+    margin: 5% auto;
     border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
 }
 .form{
-    margin: 50px;
+    margin: 0 auto;
+    padding :15px;
 }
 input{
-    padding: 2px;
-    position: absolute;
-    right: 45%;
+    padding: 15px;
+    border-radius: 15px;
+    border:1px solid gray;
+    font-size:16px;
+    width: 80%;
 }
 a{
     display: inline-block;
@@ -22,8 +36,32 @@ button{
     display: inline-block;
 }
 .submit{
+    padding-top:10px;
     text-align: center;
+}
+.submit-btn{
+    border-radius: 15px;
+    font-size: 18px;
+    padding:7px;
+    width:70%;
+    border: none;
+    background-color: rgb(206, 80, 168);
+    color:white;
+}
+.cancel-btn{
+    border-radius: 15px;
+    font-size: 18px;
+    padding:7px;
+    width:70%;
+    border: 1px solid rgb(206, 80, 168);
+    color:rgb(206, 80, 168);
+    background-color: rgb(255, 255, 255);
 }
 .detail{
     display: inline;
+}
+a{
+    width: 100%;
+    text-decoration: none;
+    color:rgb(206, 80, 168);;
 }
